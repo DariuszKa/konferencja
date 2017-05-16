@@ -1,0 +1,18 @@
+
+<check if="{{ @mode=='admin' }}">
+	<true>
+		<p>Zalogowany jako administrator.</p>
+	</true>
+	<false>
+		<check if="{{ @mode=='author'}}">
+			<true>
+				<p>Zalogowany jako autor.</p>
+			</true>
+			<false>
+				<p></p>
+			</false>
+		</check>
+	</false>
+</check>
+</body>
+</html>
