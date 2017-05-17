@@ -6,7 +6,7 @@
 	<false>
 		<check if="{{ @mode=='author'}}">
 			<true>
-				<p>Zalogowany jako autor.</p>
+				<p>Zalogowany jako {{ $_SESSION['AUTHOR_DEGREE'] }} {{ $_SESSION['AUTHOR_NAME'] }}.</p>
 			</true>
 			<false>
 				<p></p>

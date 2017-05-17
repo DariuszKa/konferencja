@@ -1,9 +1,9 @@
 <?php
-if (!empty($_REQUEST['LOGIN']) && !empty($_REQUEST['PASSWORD'])) {
+if (!empty($_REQUEST['LOGIN']) && !empty($_REQUEST['PASSWORD']) && !empty($_REQUEST['NAME']) && !empty($_REQUEST['DEGREE'])) {
 
 	$f3 = require('fatfree/lib/base.php');
 	$db = require('dbConnection.php');
-	$mapper=new DB\SQL\Mapper($db,"REGISTRATIONS");
+	$mapper=new DB\SQL\Mapper($db,"USERS");
 
 	if ($mapper->load(array('LOGIN = ?',$_REQUEST['LOGIN']))!=FALSE) {
 		header('Location: registration.php?message=alreadyExists');

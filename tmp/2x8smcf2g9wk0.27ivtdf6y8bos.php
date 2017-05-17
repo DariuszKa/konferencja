@@ -6,7 +6,7 @@
 	<?php else: ?>
 		<?php if ($mode=='author'): ?>
 			
-				<p>Zalogowany jako autor.</p>
+				<p>Zalogowany jako <?php echo $_SESSION['AUTHOR_DEGREE']; ?> <?php echo $_SESSION['AUTHOR_NAME']; ?>.</p>
 			
 			<?php else: ?>
 				<p></p>
