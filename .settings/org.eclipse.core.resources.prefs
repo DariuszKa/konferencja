@@ -1,8 +1,11 @@
-#Wed May 17 10:02:15 CEST 2017
+#Wed May 17 10:58:21 CEST 2017
 eclipse.preferences.version=1
 encoding//elements/adminTemplate.html=UTF-8
 encoding//elements/authorTemplate.html=UTF-8
 encoding//elements/loginTemplate.html=UTF-8
+encoding//elements/newArticleTemplate.html=UTF-8
 encoding//elements/registrationTemplate.html=UTF-8
+encoding/author.php=UTF-8
 encoding/login.php=UTF-8
+encoding/newArticleForm.php=UTF-8
 encoding/registration.php=UTF-8
