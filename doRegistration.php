@@ -6,12 +6,12 @@ if (!empty($_REQUEST['LOGIN']) && !empty($_REQUEST['PASSWORD'])) {
 	$mapper=new DB\SQL\Mapper($db,"REGISTRATIONS");
 
 	if ($mapper->load(array('LOGIN = ?',$_REQUEST['LOGIN']))!=FALSE) {
-		header('Location: registration.php');
+		header('Location: registration.php?message=alreadyExists');
 	} //je¿eli ju¿ istnieje to nie rejestruj jeszcze raz
 	else {
 		$mapper->copyfrom('POST');
 		$mapper->save();
-		header('Location: login.php');
+		header('Location: login.php?message=newAuthor');
 	} //dodaj nowego autora
 }
-else header('Location: registration.php');
+else header('Location: registration.php?message=blank');

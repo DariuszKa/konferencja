@@ -12,5 +12,5 @@
 		else header('Location: author.php');
 	}
 	else {
-		header('Location: login.php');
+		header('Location: login.php?message=wrongloginorpass');
 	}
