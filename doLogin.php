@@ -8,9 +8,10 @@
 	$record=$mapper->load(array('LOGIN = ? and PASSWORD = ?',$theLogin,$thePass));
 	if ($record!=FALSE) {
 		session_start();
-		$_SESSION['ID']=$record->ID;
+		$_SESSION['AUTHOR_ID']=$record->ID;
 		$_SESSION['AUTHOR_NAME']=$record->NAME;
 		$_SESSION['AUTHOR_DEGREE']=$record->DEGREE;
+		
 		if ($record->MODE=='ADMIN') header('Location: admin.php');
 		else {
 			header('Location: author.php');	

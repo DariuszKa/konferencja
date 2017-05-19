@@ -1,11 +1,11 @@
 <include href="elements/_header.html" />
 <h2>Nowy artykuł</h2>
 <form action='doNewArticle.php' method='POST'>
-<input type="hidden" name="AUTHOR_ID" value="{{ $_SESSION['ID'] }}">
+<input type="hidden" name="AUTHOR_ID" value="{{ $_SESSION['AUTHOR_ID'] }}">
 <input type="hidden" name="AUTHOR_NAME" value="{{ $_SESSION['AUTHOR_NAME'] }}">
 <input type="hidden" name="AUTHOR_DEGREE" value="{{ $_SESSION['AUTHOR_DEGREE'] }}">
-Tytuł pracy: <input type="text" name="ARTICLE_NAME"><br>
-Kategoria: <input type="text" name="CATEGORY_NAME"><br>
+Tytuł pracy: <input type="text" name="ARTICLE_NAME"><br><br>
+Kategoria: <input type="text" name="CATEGORY_NAME"><br><br>
 <input type="submit" value="Dodaj artykuł">
 </form>
 

@@ -1,5 +1,21 @@
 <include href="elements/_header.html" />
 
+<p align="center"><b>Tematy prac:</b></p>
+<table border=1 bgcolor="#ffffff">
+<tr bgcolor="#dddddd"><th>L.p.</th><th>Tytuł</th><th>Kategoria</th><th>Ocena recenzji (1-5)</th><th></th></tr>
+
+<repeat group="{{ @articles }}" value="{{ @article }}">
+<tr>
+<td>{{ @article->ID }}</td>
+<td>{{ @article->ARTICLE_NAME }}</td>
+<td>{{ @article->CATEGORY_NAME }}</td>
+<td>{{ @article->REVIEW_EVALUATION }}</td>
+<td><a href="doDelete.php?ARTICLE_ID={{ @article->ID }}">Usuń</a></td>
+</tr>
+</repeat>
+
+</table>
+
 <p><a href="newArticleForm.php">Dodaj artykuł</a></p>
 <p><a href="doLogout.php">Wyloguj się</a></p>
 <include href="elements/_footer.html" />

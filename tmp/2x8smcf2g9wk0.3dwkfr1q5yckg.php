@@ -14,7 +14,7 @@
 <td><?php echo $article->CATEGORY_NAME; ?></td>
 <td><?php echo $article->REVIEWER_ID; ?></td>
 <td><?php echo $article->REVIEW_EVALUATION; ?></td>
-<td>Dodaj recenzenta itd.</td>
+<td></td>
 </tr>
 <?php endforeach; ?>
 
