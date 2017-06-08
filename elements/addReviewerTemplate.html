@@ -1,0 +1,17 @@
+<include href="elements/_header.html" />
+<h2>Nowy recenzent</h2>
+<form action='doAddReviewer.php' method='POST'>
+Login: {{ @newLogin }} <br><br>
+Hasło: {{ @newPassword }} <br><br>
+<input type="hidden" name="LOGIN" value="{{ @newLogin }}">
+<input type="hidden" name="PASSWORD" value="{{ @newPassword }}">
+Imię i nazwisko: <input type="text" name="NAME"><br><br>
+Stopień naukowy: <input type="text" name="DEGREE"><br><br>
+Adres e-mail: <input type="text" name="E_MAIL"><br><br>
+<input type="hidden" name="MODE" value="REVIEWER">
+<input type="submit" value="Utwórz konto recenzenta">
+</form>
+<p>
+<a href="admin.php">Wycofaj</a>
+</p>
+<include href="elements/_footer.html" />

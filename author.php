@@ -16,5 +16,7 @@
 		if ($_REQUEST['message']=="newArticle") echo "Nowy artykuł został dodany.";
 		if ($_REQUEST['message']=="articleDeleted") echo "Artykuł został usunięty.";
 		if ($_REQUEST['message']=="accessDenied") echo "Odmowa dostępu!";
+		if ($_REQUEST['message']=="fileInserted") echo "Wstawiono plik z artykułem";
+		if ($_REQUEST['message']=="blank") echo "Puste dane!";
 	}
 	else header('Location: login.php?message=accessDenied');

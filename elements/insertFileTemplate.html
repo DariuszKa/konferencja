@@ -1,0 +1,9 @@
+<include href="elements/_header.html" />
+<h2>Wstaw plik</h2>
+<form name="form" action='doInsertFile.php' method='POST' enctype='multipart/form-data'>
+<input type="hidden" name="ARTICLE_ID" value="{{ $_SESSION['ARTICLE_ID'] }}">
+Plik: <input type="file" name="FILE_NAME" id="fn">
+<input type="submit" value="Wstaw plik">
+</form>
+
+<include href="elements/_footer.html" />

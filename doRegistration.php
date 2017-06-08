@@ -1,5 +1,5 @@
 <?php
-if (!empty($_REQUEST['LOGIN']) && !empty($_REQUEST['PASSWORD']) && !empty($_REQUEST['NAME']) && !empty($_REQUEST['DEGREE'])) {
+if (!empty($_REQUEST['LOGIN']) && !empty($_REQUEST['PASSWORD']) && !empty($_REQUEST['NAME']) && !empty($_REQUEST['DEGREE']) && !empty($_REQUEST['E_MAIL'])) {
 
 	$f3 = require('fatfree/lib/base.php');
 	$db = require('dbConnection.php');

@@ -1,10 +1,10 @@
 <include href="elements/_header.html" />
 <p><a href="doLogout.php">Wyloguj się</a></p>
-<p>Termin recenzji upływa 2017-06-10</p>
+<p>Termin recenzji upływa 2017-07-01</p>
 <p align="center"><b>Tematy prac:</b></p>
-<table border=1 bgcolor="#ffffff">
-<tr bgcolor="#dddddd"><th>L.p.</th><th>Tytuł nauk.</th><th>Autor</th><th>Tytuł</th><th>Kategoria</th><th>Recenzent</th><th>Ocena recenzji (1-5)</th><th></th></tr>
 
+<table border=1 bgcolor="#ffffff">
+<tr bgcolor="#dddddd"><th>L.p.</th><th>Tytuł nauk.</th><th>Autor</th><th>Tytuł</th><th>Kategoria</th><th>Artykuł</th><th>Recenzent</th><th>Recenzja</th><th></th></tr>
 <repeat group="{{ @articles }}" value="{{ @article }}">
 <tr>
 <td>{{ @article->ID }}</td>
@@ -12,12 +12,30 @@
 <td>{{ @article->AUTHOR_NAME }}</td>
 <td>{{ @article->ARTICLE_NAME }}</td>
 <td>{{ @article->CATEGORY_NAME }}</td>
+<td><a href="downloadFile.php?ARTICLE_ID={{ @article->ID }}">Pobierz plik</a></td>
 <td>{{ @article->REVIEWER_ID }}</td>
 <td>{{ @article->REVIEW_EVALUATION }}</td>
-<td></td>
+<td><a href="setReviewer.php?ARTICLE_ID={{ @article->ID }}">Wybierz recenzenta</a></td>
 </tr>
 </repeat>
-
 </table>
 
+<p align="center"><b>Recenzenci:</b></p>
+<table border=1 bgcolor="#ffffff">
+<tr bgcolor="#dddddd"><th>ID</th><th>stopień</th><th>imię i nazwisko</th><th>E-mail</th><th></th></tr>
+<repeat group="{{ @reviewers }}" value="{{ @reviewer }}">
+<tr>
+<td>{{ @reviewer->ID }}</td>
+<td>{{ @reviewer->DEGREE }}</td>
+<td>{{ @reviewer->NAME }}</td>
+<td>{{ @reviewer->E_MAIL }}</td>
+<td><a href="sendMailToReviewer.php?REVIEWER_ID={{ @reviewer->ID }}">Wyślij e-mail</a>
+<a href="deleteReviewer.php?REVIEWER_ID={{ @reviewer->ID }}">Usuń</a>
+</td>
+</tr>
+</repeat>
+</table>
+<p>
+<a href="addReviewer.php">Dodaj recenzenta</a>
+</p>
 <include href="elements/_footer.html" />

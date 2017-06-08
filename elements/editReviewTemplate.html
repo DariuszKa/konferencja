@@ -1,0 +1,15 @@
+<include href="elements/_header.html" />
+<h2>Edycja recenzji</h2>
+<p>
+Kategoria: {{ @category }}<br>
+Artykuł: {{ @articlename }}
+</p>
+<form action="doEditReview.php" method="POST" id="erform">
+<input type="hidden" name="ARTICLE_ID" value="{{ @articleid }}">
+Recenzja: <textarea name="REVIEW_EVALUATION" form="erform">
+</textarea>
+<br><br>
+<input type="submit" value="Edytuj recenzję">
+</form>
+
+<include href="elements/_footer.html" />
